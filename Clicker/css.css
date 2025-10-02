@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Irish';
+    src: url('Font/IrishGrover-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lacquer';
+    src: url('Font/Lacquer-Regular.ttf');
+}
+
+
+body{
+    background-color:#e0a4a4 ;
+    font-family: 'Irish', sans-serif;
+    z-index: -2;
+}
+main{
+    width: 1200px;
+    margin:0 auto;
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.form-titre{
+    position: absolute;
+    background-image: url('titre/patchwork.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:400px;
+    height:120px;
+    left: 20px;
+    top: 40px;
+}
+
+
+h1{
+    color:white;
+    margin: 30px;
+}
+
+h2{
+    color: white;
+    font-size: 35px;
+    margin:0px 0px;
+}
+
+.dolly{
+    width: 400px;
+    transition:transform 0.2s ease-in-out;
+}
+
+.dolly:hover{
+    transform:scale(1.1);
+    cursor: url('arme/aiguille.png'), auto;
+}
+/*
+.dolly:active{
+    transform:scale(1.0);
+}
+    */
+
+    @keyframes shake {
+        0% { transform: translate(0px, 0px); }
+        25% { transform: translate(2px, -2px); }
+        50% { transform: translate(-2px, 2px); }
+        75% { transform: translate(2px, -2px); }
+        100% { transform: translate(0px, 0px); }
+    }
+    .shake {
+        animation: shake 0.2s ease-in-out;
+    }
+#point{
+    font-size: 30px;
+}
+
+.form-dolly{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-dolly p{
+    font-size:35px;
+}
+
+.combo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -30px;
+    width: auto;
+}
+.form-combo img, .form-combo2 img{
+    width: 60px;
+}
+.form-combo, .form-combo2{
+    display: flex;
+    gap: 2px;
+}
+
+.form-combo2{
+    margin-top: -60px;
+    clip-path:inset(0 80% 0 0);
+}
+
+.pannel{
+    margin-top:250px;
+    position: relative;
+}
+
+
+.form-de{
+    position: absolute;
+    left: 40px;
+    top:-70px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.form-de img:hover{
+    cursor:pointer;
+}
+
+.form-de img{
+    width:100px;
+}
+
+.form-arme{
+    position: absolute;
+    top:65px;
+    left: 40px;
+    width: 740px;
+    height: 458px;
+}
+
+.form-attack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: white;
+    right:-30px;
+    top:150px;
+    font-size: 30px;
+}
+
+.power, .power1, .power2{
+    position: absolute;
+    width: 200px;
+    left: -120px;
+    top : 300px;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.power1{
+    top:400px;
+}
+
+.power2{
+    top:500px;
+}
+
+.power:hover,.power1:hover,.power2:hover{
+    cursor: pointer;
+    transform: translateX(-30px);
+}
+
+.form-input{
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.form-input, .choix-arme{
+    position: relative;
+}
+
+.form-input p{
+    color: white;
+    font-size: 25px;
+}
+
+.form-input p:first-of-type{
+    position: absolute;
+    top:0px;
+    left:40px;
+}
+
+.choix-arme{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.606);
+    border: 5px solid black;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+/* Style global de la scrollbar */
+.choix-arme::-webkit-scrollbar {
+    width: 10px;  /* Largeur de la scrollbar */
+}
+/* Couleur et arrondi de la piste (fond) */
+.choix-arme::-webkit-scrollbar-track {
+    background: #ffffff96;  
+    border-radius: 5px;
+}
+
+/* Couleur et style du curseur (barre) */
+.choix-arme::-webkit-scrollbar-thumb {
+    background: #2b353b;  /* Couleur bleue */
+    border-radius: 5px;
+}
+
+.lumiere{
+    position: absolute;
+    top:-500px;
+    z-index: -5;
+    display: none;
+}
+
+#blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 300%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+    z-index: 9999;
+}

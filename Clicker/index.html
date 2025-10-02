@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet">
+    <title>Clicker</title>
+</head>
+<body>
+    <main>
+        <div class="form-titre">
+            <h1>Shred the dolly</h1>
+        </div>
+        <img class="power" src="power/cliqueh.png">
+        <img class="power1" src="power/doubleh.png">
+        <img class="power2" src="power/x10h.png">
+        <div class="pannel">
+            <img id="fond" src="fond/fond.png">
+            <div class="form-de">
+                <img class="de1" src="dé/attaque.png">
+                <img class="de2" src="dé/mission.png">
+                <img class="de3" src="dé/statistique.png">
+            </div>
+            <div class="form-arme">
+                
+                <div class="choix-arme">
+                    <h2>Armes</h2>
+                    <div class="form-input">
+                        <img onclick="achat()" id="dispotournevis" src="input/inputindispo.png">
+                        <p>Tournevis</p>
+                        <p>LVL <span id="lvltournevis">0</span></p>
+                    </div>
+                    <div class="form-input">
+                        <img id="dispocouteau" src="input/inputindispo.png">
+                        <p>Couteau</p>
+                        <p>LVL <span id="lvlcouteau">0</span></p>
+                    </div>
+                    <div class="form-input">
+                        <img id="dispotronconneuse" src="input/inputindispo.png">
+                        <p>Tronçonneuse</p>
+                        <p>LVL <span id="lvltronconneuse">0</span></p>
+                    </div>
+                    <div class="form-input">
+                        <img id="dispoarbalete" src="input/inputindispo.png">
+                        <p>Arbalète</p>
+                        <p>LVL <span id="lvlarbalete">0</span></p>
+                    </div>
+                    <div class="form-input">
+                        <img id="dispopistolet" src="input/inputindispo.png">
+                        <p>Pistolet</p>
+                        <p>LVL <span id="lvlpistolet">0</span></p>
+                    </div>
+                </div>
+                <div class="form-attack">
+                    <p>Puissance d'attaque :</p>
+                    <p><span id="force">1</span> x <span id="multiplicateur">1</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="form-dolly">
+            <p><span id="point">0</span> points !</p>
+            <img class="lumiere" src="dolly/lumiere.png">
+            <img onclick="clic()" id="click" class="dolly" src="dolly/dolly.png" alt="image de la poupée">
+            <div class="combo">
+                <p>x <span id="combo"> 1</span></p>
+                <div class="form-combo">
+                    <img src="bouton/ombre.png" alt="bouton vide">
+                    <img src="bouton/ombre.png" alt="bouton vide">
+                    <img src="bouton/ombre.png" alt="bouton vide">
+                    <img src="bouton/ombre.png" alt="bouton vide">
+                    <img src="bouton/ombre.png" alt="bouton vide">
+                </div>
+                <div class="form-combo2">
+                    <img id="boutonve" src="bouton/boutonve.png" alt="un bouton vert">
+                    <img id="boutonv" src="bouton/boutonv.png" alt="un bouton violet">
+                    <img id="boutonr" src="bouton/boutonr.png" alt="un bouton rouge">
+                    <img id="boutono" src="bouton/boutono.png" alt="un bouton orange">
+                    <img id="boutonb" src="bouton/boutonb.png" alt="un bouton bleu">
+                </div>
+            </div>
+        </div>
+        <div id="blackout"></div>
+    </main>
+    <script src="js.js"></script>
+</body>
+</html>
